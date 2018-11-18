@@ -1,0 +1,35 @@
+###fmt###
+1. *Println()* 可以打印字符串和变量,输出内容后自动换行
+2. *Printf()*  格式化输出，不可以打印整型变量
+   %d输出整型，%
+3. *Print()*
+4. *Sprintln，Sprintf,Sprint*
+
+###strings###
+1. *HasPrefix(s, prefix string) bool* 判断字符串s是否以prefix字符串开头
+2.  *HasSuffix(s, suffix string) bool* 判断字符串s是否以prefix字符串结尾
+3.  *Contains(s, substr string) bool* 判断字符串s是否包含substr
+4.  *index(),LastIndex()* 判断子字符串在父字符串的索引，-1表示不存在
+5. 替换
+     *replace(str,old,new,n) string* 将字符串str中的前n个字符串old替换为字符串new并返回一个新的字符串，如果n = -1则替换所有字符串old为字符串new
+6. *ToLower(),ToUpper()* 将字符串转为大小写
+7. 修剪字符串
+     *Trim(s string, cutset string) string* 剔除字符串开头和结尾指定的cutset字符。*TrimSpace(s stirng) bool* 剔除前后的空格
+8. 分割字符串
+     *Split(s, sep)* 自定义分割符号对指定字符串进行分割,返回slice
+9. 拼接slice到字符串
+    *Join(sl []string, sep string) string*
+    Join用于将元素类型为string的slice使用分割符号拼接组成一个字符串
+###字符串与其他类型的转换###
+1. 从数字类型转换到字符串
+     **Itoa(i int) string** 返回数字 i 所表示的字符串类型的十进制数
+
+	 	var a int = 100
+	 	str := strconv.Itoa(a)  
+	 	fmt.Printf("%T", str) //类型为string
+
+     	FormatFloat(f float64, fmt byte, prec int, bitSize int) string
+2. 字符串类型转为数字类型
+     
+	 	Atoi(s string) (i int, err error) 将字符串转换为 int 型
+        strconv.ParseFloat(s string, bitSize int) (f float64, err error) 字符串转换为float64型
