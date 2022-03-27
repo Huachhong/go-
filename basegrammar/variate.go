@@ -148,3 +148,15 @@ func MapTest() {
 	mapSlice["prices"] = []string{"10", "20"}
 	fmt.Printf("\nmapSlice=%v", mapSlice)
 }
+
+type person struct {
+	name, city string
+	age uint
+}
+func StruceTest() {
+	var p1 person
+	p1.name ="萧红"
+	p1.city = "深圳"
+	p1.age = 20
+	fmt.Printf("\np1 = %v", p1)
+}
