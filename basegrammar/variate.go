@@ -149,13 +149,13 @@ func MapTest() {
 	fmt.Printf("\nmapSlice=%v", mapSlice)
 }
 
-type person struct {
+type Person struct {
 	name, city string
 	age uint
 }
 func StruceTest() {
 	fmt.Printf("\n测试结构体")
-	var p1 person //结构体实例化
+	var p1 Person //结构体实例化
 	p1.name ="萧红"
 	p1.city = "深圳"
 	p1.age = 20
@@ -166,11 +166,29 @@ func StruceTest() {
 	u.addr = "广州"
 	fmt.Printf("\nu=%v", u)
 	//new实例化
-	var p2 = new(person) //返回指针
+	var p2 = new(Person) //返回指针
 	p2.name = "hong"
 	p2.age  = 25
 	p2.city = "深圳"
 	fmt.Printf("\nu=%v, u prt = %T", p2, p2)
 
-	
+	//取结构体的地址实例化 使用&对结构体进行取地址操作相当于对该结构体类型进行了一次new实例化操作
+	var p3 = &Person{}
+	p3.city = "上海"
+	p3.age = 100
+	//p3.name = "滨海路"
+	fmt.Printf("\np3=%#v", p3)
+
+	p4 := NewPerson("上海", 100)
+	fmt.Printf("\np4=%#v", p4)
+
 }
+
+//方法与接收者
+func NewPerson(name string, age uint) *Person {
+	return &Person{
+		name: name,
+		age: age,
+		}
+}
+
