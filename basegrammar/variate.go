@@ -154,9 +154,23 @@ type person struct {
 	age uint
 }
 func StruceTest() {
-	var p1 person
+	fmt.Printf("\n测试结构体")
+	var p1 person //结构体实例化
 	p1.name ="萧红"
 	p1.city = "深圳"
 	p1.age = 20
 	fmt.Printf("\np1 = %v", p1)
+
+	var u struct{name string; addr string} //匿名结构体
+	u.name = "Mr Li"
+	u.addr = "广州"
+	fmt.Printf("\nu=%v", u)
+	//new实例化
+	var p2 = new(person) //返回指针
+	p2.name = "hong"
+	p2.age  = 25
+	p2.city = "深圳"
+	fmt.Printf("\nu=%v, u prt = %T", p2, p2)
+
+	
 }

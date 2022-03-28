@@ -1,5 +1,7 @@
 package main
 
+import "golearning/basegrammar"
+
 func main() {
 	//变量测试
 	//basegrammar.VariableAndConst()
@@ -12,5 +14,6 @@ func main() {
 	//测试map
 	//basegrammar.MapTest()
 	//测试结构体
+	basegrammar.StruceTest()
 }
 
