@@ -14,6 +14,9 @@ func main() {
 	//测试map
 	//basegrammar.MapTest()
 	//测试结构体
-	basegrammar.StruceTest()
+	//basegrammar.StruceTest()
+	//basegrammar.StruceTest()
+	//测试流程控制
+	basegrammar.FlowTest()
 }
 
