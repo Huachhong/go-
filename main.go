@@ -1,6 +1,6 @@
 package main
 
-import "golearning/basegrammar"
+import "golearning/basesort"
 
 func main() {
 	//变量测试
@@ -17,6 +17,13 @@ func main() {
 	//basegrammar.StruceTest()
 	//basegrammar.StruceTest()
 	//测试流程控制
-	basegrammar.FlowTest()
+	//basegrammar.FlowTest()
+	//测试函数
+	//basegrammar.TestFun()
+	//basegrammar.TestInterface()
+
+	//####################算法#######################//
+	//
+	basesort.TestSort()
 }
 
