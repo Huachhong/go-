@@ -1,6 +1,8 @@
 package main
 
-import "golearning/basesort"
+import (
+	"golearning/baselib"
+)
 
 func main() {
 	//变量测试
@@ -24,6 +26,7 @@ func main() {
 
 	//####################算法#######################//
 	//
-	basesort.TestSort()
-}
+	//basesort.TestSort()
 
+	baselib.TestLib()
+}
