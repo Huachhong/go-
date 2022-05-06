@@ -5,4 +5,5 @@ func TestLib() {
 	//标准输入、输出
 	//TestSPrint()
 	TestStrings()
+	TestStrconv()
 }
