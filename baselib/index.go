@@ -6,4 +6,5 @@ func TestLib() {
 	//TestSPrint()
 	TestStrings()
 	TestStrconv()
+	TestLog()
 }
