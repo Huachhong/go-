@@ -7,4 +7,5 @@ func TestLib() {
 	TestStrings()
 	TestStrconv()
 	TestLog()
+	TestIo()
 }
