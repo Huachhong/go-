@@ -9,4 +9,5 @@ func TestLib() {
 	TestTime()
 	TestLog()
 	TestIo()
+	TestTemplate()
 }

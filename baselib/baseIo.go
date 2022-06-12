@@ -1,6 +1,7 @@
 package baselib
 
 import (
+	"bufio"
 	"fmt"
 	"io"
 	"os"
@@ -36,4 +37,39 @@ func TestIo() {
 	}
 	defer fd.Close()
 	fmt.Println(string(content))
+}
+
+//bufio
+func wr() {
+	file, err := os.OpenFile("./bufio.txt", os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		fmt.Println("bufio 文件创建失败")
+		return
+	}
+	defer file.Close()
+	writer := bufio.NewWriter(file)
+	for i := 0; i < 10; i++ {
+		writer.WriteString("hello world " + string(i) + "\n")
+	}
+	writer.Flush()
+}
+
+func re() {
+	file, err := os.Open("./bufio.txt")
+	if err != nil {
+		fmt.Println("bufio 读取文件失败")
+		return
+	}
+	defer file.Close()
+	reader := bufio.NewReader(file)
+	for {
+		line, _, err := reader.ReadLine()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return
+		}
+		fmt.Println(string(line))
+	}
 }
