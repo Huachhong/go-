@@ -10,5 +10,6 @@ func TestLib() {
 	TestLog()
 	TestIo()
 	//TestTemplate()
-	TestHttp()
+	//TestHttp()
+	TestJson()
 }

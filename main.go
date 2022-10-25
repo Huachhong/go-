@@ -1,8 +1,6 @@
 package main
 
-import (
-	"golearning/baselib"
-)
+import "golearning/baseobject"
 
 func main() {
 	//变量测试
@@ -28,5 +26,9 @@ func main() {
 	//
 	//basesort.TestSort()
 	//常见库
-	baselib.TestLib()
+	//baselib.TestLib()
+
+	//接口
+	baseobject.TestObject()
+
 }
