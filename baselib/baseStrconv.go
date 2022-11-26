@@ -16,7 +16,7 @@ func TestStrconv() {
 		fmt.Printf("strconv Atoi Type %T, s2 = %#v\n", s2, s2)
 	}
 
-	s3 := 100
+	s3 := 1000
 	s4 := strconv.Itoa(s3)
 	fmt.Printf("strconv Itoa, Type %T, s4 = %#v\n", s4, s4)
 
@@ -28,5 +28,5 @@ func TestStrconv() {
 	i1 := "-2"
 	i2, err := strconv.ParseInt(i1, 10, 64)
 	fmt.Printf("strconv parse, Type %T, i2 = %#v, error=%s\n", i2, i2, err)
-	
+
 }

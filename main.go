@@ -1,6 +1,6 @@
 package main
 
-import "golearning/baseobject"
+import "golearning/datastructure/tree"
 
 func main() {
 	//变量测试
@@ -27,8 +27,11 @@ func main() {
 	//basesort.TestSort()
 	//常见库
 	//baselib.TestLib()
-
+	//basepkg.ReadByViper()
 	//接口
-	baseobject.TestObject()
-
+	//baseobject.TestObject()
+	//协程
+	//basegoroutine.Run()
+	//树
+	tree.Test()
 }
