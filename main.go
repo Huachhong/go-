@@ -1,6 +1,6 @@
 package main
 
-import "golearning/datastructure/tree"
+import "golearning/datastructure/queue"
 
 func main() {
 	//变量测试
@@ -33,5 +33,10 @@ func main() {
 	//协程
 	//basegoroutine.Run()
 	//树
-	tree.Test()
+	//tree.Test
+	//链表
+	//linkedlist.Test()
+	//	栈
+	//stack.Test()
+	queue.Test()
 }

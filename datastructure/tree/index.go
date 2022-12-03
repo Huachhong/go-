@@ -11,7 +11,7 @@ func Test() {
 
 	fmt.Print("\n二叉查找树插入:")
 	te := NewBinarySearchTree(nil)
-	te.Insert("30")
+	te.Insert(30)
 	te.Insert(25)
 	te.Insert(36)
 	te.Insert(20)
@@ -22,4 +22,7 @@ func Test() {
 	midOrderTraverse(te.root)
 	te.Find(28)
 	fmt.Printf("\n二叉树查找%v", te.Find(28))
+	fmt.Printf("\n二叉查找树删除:%v", te.Delete(30))
+	midOrderTraverse(te.root)
+
 }
