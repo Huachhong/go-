@@ -32,4 +32,7 @@ func Test() {
 	dhead.dtraverse(dhead)
 	//fmt.Println()
 	fmt.Println(dsize(dhead))
+
+	fmt.Println("-> 双向循环链表")
+	RingTest()
 }
