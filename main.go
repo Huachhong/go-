@@ -1,6 +1,6 @@
 package main
 
-import "golearning/datastructure/linkedlist"
+import "golearning/algorithms"
 
 func main() {
 	//变量测试
@@ -35,9 +35,11 @@ func main() {
 	//树
 	//tree.Test
 	//链表
-	linkedlist.Test()
+	//linkedlist.Test()
 	//	栈
 	//stack.Test()
 	//队列
 	//queue.Test()
+	//排序
+	algorithms.Test()
 }
