@@ -1,6 +1,10 @@
 package main
 
-import "golearning/algorithms"
+import (
+	"fmt"
+	"golearning/algorithms"
+	"golearning/basegrammar"
+)
 
 func main() {
 	//变量测试
@@ -12,7 +16,8 @@ func main() {
 	//切片测试
 	//basegrammar.SliceTest()
 	//测试map
-	//basegrammar.MapTest()
+	fmt.Println("测试map")
+	basegrammar.MapTest()
 	//测试结构体
 	//basegrammar.StruceTest()
 	//basegrammar.StruceTest()
@@ -41,5 +46,6 @@ func main() {
 	//队列
 	//queue.Test()
 	//排序
+	fmt.Println("\n测试排序")
 	algorithms.Test()
 }
