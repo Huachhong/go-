@@ -1,6 +1,14 @@
 package main
 
+<<<<<<< HEAD
 import "golearning/baseobject"
+=======
+import (
+	"fmt"
+	"golearning/algorithms"
+	"golearning/basegrammar"
+)
+>>>>>>> 33dfbc5e78cc1fc26aa03d005a32f9785adabecc
 
 func main() {
 	//变量测试
@@ -12,7 +20,8 @@ func main() {
 	//切片测试
 	//basegrammar.SliceTest()
 	//测试map
-	//basegrammar.MapTest()
+	fmt.Println("测试map")
+	basegrammar.MapTest()
 	//测试结构体
 	//basegrammar.StruceTest()
 	//basegrammar.StruceTest()
@@ -40,4 +49,7 @@ func main() {
 	//stack.Test()
 	//队列
 	//queue.Test()
+	//排序
+	fmt.Println("\n测试排序")
+	algorithms.Test()
 }

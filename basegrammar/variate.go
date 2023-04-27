@@ -21,21 +21,21 @@ func VariableAndConst() {
 		v4 = 5
 		v5 = 6
 	)
-	fmt.Printf("\nv1=%v,v2=%v,v3=%v,v4=%v,v5=%v", v1,v2,v3,v4,v5)
+	fmt.Printf("\nv1=%v,v2=%v,v3=%v,v4=%v,v5=%v", v1, v2, v3, v4, v5)
 	fmt.Println("\n常量............")
-	const cn1  = 1
-	const cn2  = "con string"
+	const cn1 = 1
+	const cn2 = "con string"
 	//iota是go语言的常量计数器，只能在常量的表达式中使用。iota在const关键字出现时将被重置为0。const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)。 使用iota能简化定义，在定义枚举时很有用
 	const (
 		cn3 = iota
 		cn4
 		cn5
 	)
-	fmt.Printf("\ncn1=%v,cn2=%v,cn3=%v,cn4=%v,cn5=%v",cn1, cn2,cn3,cn4,cn5)
+	fmt.Printf("\ncn1=%v,cn2=%v,cn3=%v,cn4=%v,cn5=%v", cn1, cn2, cn3, cn4, cn5)
 	fmt.Println("\n浮点型............")
 	var f1 = 1.0
 	var f2 float32 = 1.02
-	fmt.Printf("f1=%f,f2=%f",f1, f2)
+	fmt.Printf("f1=%f,f2=%f", f1, f2)
 
 	fmt.Println("\n字符类型............")
 	//字符用单引号表示
@@ -67,9 +67,9 @@ func VariableAndConst() {
 //计算及遍历字符串长度
 func RandString() {
 	s1 := "hello,中国！"
-	fmt.Printf("len=%d,utf8 len=%d,%d,%d\n", len(s1), strings.Count(s1, "") - 1, len([]rune(s1)),utf8.RuneCountInString(s1))
+	fmt.Printf("len=%d,utf8 len=%d,%d,%d\n", len(s1), strings.Count(s1, "")-1, len([]rune(s1)), utf8.RuneCountInString(s1))
 	for _, r := range s1 {
-		fmt.Printf("%v(%c),",r,r)
+		fmt.Printf("%v(%c),", r, r)
 	}
 }
 
@@ -78,15 +78,15 @@ func ArrTest() {
 	var arr1 [5]int = [5]int{1, 2, 3, 4, 5}
 	var arr2 = [5]int{1, 2, 3, 4, 5}
 	var arr3 = [...]int{1, 2, 3}
-	var arr4 = [5]string{2:"where", 4:"are"}
-	arr5 := [3]string{0:"yh"}
-	arr6 := [...]struct{
+	var arr4 = [5]string{2: "where", 4: "are"}
+	arr5 := [3]string{0: "yh"}
+	arr6 := [...]struct {
 		name string
-		age uint8
-	}{{"小明", 10}, {"小强",9}}
+		age  uint8
+	}{{"小明", 10}, {"小强", 9}}
 	fmt.Println(arr1, arr2, arr3, arr4, arr5, arr6)
 	fmt.Println("遍历数组")
-	for  _, v := range arr1 {
+	for _, v := range arr1 {
 		fmt.Printf("val = %v\n", v)
 	}
 }
@@ -114,8 +114,8 @@ func MapTest() {
 	fmt.Printf("m1=%v, m1 type=%T", m1, m1)
 	//在声明的时候初始化
 	m2 := map[string]string{
-		"na":"明",
-		"age":"20",
+		"na":  "明",
+		"age": "20",
 	}
 	fmt.Printf("\nm2=%v", m2)
 	//判断某个键是否存在。// 如果key存在ok为true,v为对应的值；不存在ok为false,v为值类型的零值
@@ -144,7 +144,21 @@ func MapTest() {
 	//值为切片的map
 	var mapSlice = make(map[string][]string, 10)
 	fmt.Printf("\nmapSlice=%v", mapSlice)
-	mapSlice["goods"] = []string{"苹果","栗子"}
+	mapSlice["goods"] = []string{"苹果", "栗子"}
 	mapSlice["prices"] = []string{"10", "20"}
 	fmt.Printf("\nmapSlice=%v", mapSlice)
+
+	testMap := make(map[string]string, 3)
+	testMap["one"] = "first"
+	testMap["two"] = "second"
+	testMap["ach"] = "third"
+	fmt.Println()
+	fmt.Println(testMap)
+	//键值对换
+	invMap := make(map[string]string, 3)
+	for k, v := range testMap {
+		invMap[v] = k
+	}
+	fmt.Println()
+	fmt.Println(invMap)
 }
