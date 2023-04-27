@@ -1,6 +1,6 @@
 package main
 
-import "golearning/datastructure/linkedlist"
+import "golearning/baseobject"
 
 func main() {
 	//变量测试
@@ -29,13 +29,13 @@ func main() {
 	//baselib.TestLib()
 	//basepkg.ReadByViper()
 	//接口
-	//baseobject.TestObject()
+	baseobject.TestObject()
 	//协程
 	//basegoroutine.Run()
 	//树
 	//tree.Test
 	//链表
-	linkedlist.Test()
+	//linkedlist.Test()
 	//	栈
 	//stack.Test()
 	//队列
